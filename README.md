@@ -1,3 +1,4 @@
+![logo](jadi4llamacpp_02.png)
 # jadi4llamacpp
 ## (J)ust (A)nother (D)rop-(i)n (for) [llama.cpp](https://github.com/ggml-org/llama.cpp)
 
