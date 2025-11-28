@@ -2,33 +2,33 @@
 ## (J)ust (A)nother (D)rop-(i)n (for) [llama.cpp](https://github.com/ggml-org/llama.cpp)
 
 ## Limitations
-This project currently provides **binary builds only for Microsoft Windows**.  
-Other operating systems (Linux, macOS, etc.) are not supported at this time.
+This project currently provides **binary builds only for Microsoft Windows**. Other operating systems (Linux, macOS, etc.) are not supported at this time.
 
 ## Overview
-This project is part of my personal use case. I often experiment with various LLM applications on **Microsoft Windows OS** with **NVIDIA CUDA GPU** support.  
-One of the tools I use heavily is **llama.cpp**, since it provides one of the simplest and lightest ways to run LLMs locally on Windows.
+This project is part of my personal use case. I often experiment with various LLM applications on **Microsoft Windows OS** with **NVIDIA CUDA GPU** support. One of the tools I use heavily is **llama.cpp**, since it provides one of the simplest and lightest ways to run LLMs locally on Windows.
 Unfortunately, llama.cpp sometimes fails to load certain "Eastern" LLM models (such as **Qwen** or **DeepSeek-like** like formats), even when using the most recent source code.  
 
-To address this limitation, I created **jadi4llamacpp** — to ensures my llama.cpp binary can fully recognize and work with Qwen, DeepSeek-like, and similar model formats.
+To address this limitation, I pre-compiled **[jadi4llamacpp](https://github.com/andreiramani/jadi4llamacpp)** - to ensures my llama.cpp binary can fully recognize and work with Qwen-like, DeepSeek-like, and similar model formats.
 
 ## Goal
 - Extend llama.cpp compatibility with additional model formats (bridging "Eastern" and "Western" llm model :).
-- (Specifically) Provide a reliable way to run Qwen and DeepSeek-like models locally on Windows.
+- (Specifically) Provide a reliable way to run Qwen and DeepSeek-like variant models locally on Windows.
 - Keep the workflow simple and lightweight, just like the original llama.cpp.
 
 ## Releases
-
-I currently provide two release versions:
-
-- **WS (Workstation)**: Designed for desktop and laptop environments with CPU-only or NVIDIA CUDA GPUs.  
+Currently provide two versions:
+- **WS (Workstation)**: Designed for desktop and laptop with CPU-only or NVIDIA CUDA GPUs.  
 - **DC (Data Center)**: An experimental build intended for data center–grade NVIDIA CUDA GPUs.
 
-The WS version is my primary release for everyday local use, while the DC version is a smaller experiment to explore compatibility and performance on high-end, server-class hardware.
+The WS version is my primary release for everyday local use, while the DC version is an experiment to explore compatibility and performance on high-end, server-class hardware.
+
+## GPU Compute Compiler Selection
+For each version, I carefully selected the **GPU compute compiler targets** to ensure **optimal performance** across different GPU series.  
+
+It’s worth noting that some compute capability versions are identical between consumer and enterprise GPUs (for example: **7.5, 8.6, 8.9, 12.0**).
 
 ## Maintenance
-
-I cannot guarantee continuous maintenance of these releases. As long as I actively use **llama.cpp**, I will try to provide periodic updates — especially for the **WS (Workstation)** version.  
+I cannot guarantee continuous maintenance of these releases. As long as I actively use **llama.cpp**, I will try to provide periodic updates - especially for the **WS (Workstation)** version.  
 
 The **DC (Data Center)** build is more of an experiment, and honestly, I doubt anyone would seriously run llama.cpp on a data center–grade GPU under bare-metal Windows Server (though if someone does, that would be quite impressive!).
 
@@ -41,12 +41,12 @@ The **DC (Data Center)** build is more of an experiment, and honestly, I doubt a
 4. If you are unsure, make a backup of your existing `.exe` and `.dll` files before overwriting.
 
 ### If you are new to llama.cpp
-1. Extract the **jadi4llamacpp** release into a folder of your choice.  
+1. Extract the **[jadi4llamacpp](https://github.com/andreiramani/jadi4llamacpp)** release into a folder of your choice.  
 2. Download a **GGUF model**:
-   - For **CPU inference**, avoid using very large GGUF models. As a general recommendation, the GGUF file size should not exceed **half of your system RAM**.  
-   - For **CUDA GPU inference**, ensure the GGUF model size is smaller than your GPU’s VRAM capacity.  
-3. For easier setup, place the model file in the same folder where you extracted **jadi4llamacpp**.  
-4. Open a **Command Prompt** in the jadi4llamacpp folder and run one of the following:
+   - For **CPU inference** only, avoid using very large models. As a general recommendations: choose smaller precision (like 4-bit), and the model size should not exceed **one third of your system RAM**.  
+   - For **CUDA GPU inference**, ensure the model size is smaller than your GPU’s VRAM capacity.  
+3. For easier setup, place the model file in the same folder where you extracted **[jadi4llamacpp](https://github.com/andreiramani/jadi4llamacpp)**.  
+4. Open a **Command Prompt** in the [jadi4llamacpp](https://github.com/andreiramani/jadi4llamacpp) folder and run one of the following:
 
    - **CLI interactive mode**:  
      ```bash
@@ -134,3 +134,5 @@ Supported data center–grade NVIDIA GPUs:
 
 </details>
 
+## Other Docs
+Please read from [llama.cpp wiki's](https://github.com/ggml-org/llama.cpp/wiki)
