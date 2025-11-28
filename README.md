@@ -1,6 +1,4 @@
 ![logo](jadi4llamacpp_02.png)
-# jadi4llamacpp
-## (J)ust (A)nother (D)rop-(i)n (for) [llama.cpp](https://github.com/ggml-org/llama.cpp)
 
 ## Limitations
 This project currently provides **binary builds only for Microsoft Windows**. Other operating systems (Linux, macOS, etc.) are not supported at this time.
