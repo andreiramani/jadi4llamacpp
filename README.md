@@ -53,7 +53,7 @@ The **DC (Data Center)** build is more of an experiment, and honestly, I doubt a
      llama-cli -m <your-gguf-file>
      ```
 
-   - **Browser-based server**:  
+   - **Browser-based mode**:  
      ```bash
      llama-server -m <your-gguf-file> --port <port-number>
      ```
