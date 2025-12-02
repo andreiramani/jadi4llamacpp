@@ -38,6 +38,7 @@ The **DC (Data Center)** build is more of an experiment, and honestly, I doubt a
 2. Extract the files into your existing **llama.cpp** folder.  
 3. When prompted with the overwrite dialog, select **Yes**.  
 4. If you are unsure, make a backup of your existing `.exe` and `.dll` files before overwriting.
+5. Run llama.cpp using `llama-cli` or `llama-server`  
 
 ### If you are new to llama.cpp
 1. Extract the **[jadi4llamacpp](https://github.com/andreiramani/jadi4llamacpp)** release into a folder of your choice.  
