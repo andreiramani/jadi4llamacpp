@@ -62,7 +62,7 @@ The **DC (Data Center)** build is more of an experiment, and honestly, I doubt a
      ```
      to access the llama.cpp interface.
 
-## NVIDIA GPU Support
+## NVIDIA GPU Support List
 
 <details>
 <summary>🖥️ WS (Workstation) Version</summary>
