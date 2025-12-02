@@ -14,7 +14,7 @@ To address this limitation, I pre-compiled **[jadi4llamacpp](https://github.com/
 - (Specifically) Provide a reliable way to run Qwen and DeepSeek-like variant models locally on Windows.
 - Keep the workflow simple and lightweight, just like the original llama.cpp.
 
-## Releases
+## [Releases](https://github.com/andreiramani/jadi4llamacpp/releases)
 Currently provide two versions:
 - **WS (Workstation)**: Designed for desktop and laptop with CPU-only or NVIDIA CUDA GPUs.  
 - **DC (Data Center)**: An experimental build intended for data center–grade NVIDIA CUDA GPUs.
